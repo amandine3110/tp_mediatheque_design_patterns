@@ -10,6 +10,10 @@ public class Book extends Item {
 		this.author = author;
 	}
 
+	public void accept(ItemVisitor v) {
+		v.visit(this);
+	}
+
 	public String getAuthor() {
 		return author;
 	}

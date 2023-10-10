@@ -8,6 +8,10 @@ public class CD extends Item {
 		this.numberOfTracks = numberOfTracks;
 	}
 
+	public void accept(ItemVisitor v) {
+		v.visit(this);
+	}
+
 	public int getNumberOfTracks() {
 		return numberOfTracks;
 	}
